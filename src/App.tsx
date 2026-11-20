@@ -8,11 +8,7 @@ export default function App() {
     <Router>
       {(props) => (
         <>
-          <Title>Solid App</Title>
-          <nav>
-            <a href={paths()}>Home</a>
-            <a href={paths.users()}>Users</a>
-          </nav>
+          <Title>Departure Board</Title>
           <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
         </>
       )}
