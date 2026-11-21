@@ -6,3 +6,39 @@ body {
     sans-serif;
   text-align: center;
 }
+
+select {
+  padding: 0.5rem;
+  border: 1px solid navy;
+  border-radius: 5px;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+option {
+  padding: 0.5rem;
+}
+
+option:hover {
+  background-color: aqua;
+}
+
+.card {
+  margin: 0.5rem 0.75rem;
+  padding: 2rem;
+  background-color: grey;
+  border: 5px solid orange;
+}
+
+.screen {
+  color: white;
+  margin: 0.5rem 0.75rem;
+  padding: 2rem;
+  background-color: #262626;
+}
+
+#stationName {
+  color: white;
+  text-align: left;
+}

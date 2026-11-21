@@ -71,6 +71,12 @@ export default function stationSelect() {
         <option value="">Downtown Redmond</option>
   </Show>
   </select>
+
+  <div class="card">
+    <div class="screen">
+    <h2 id="stationName">Westlake</h2>
+    </div>
+    </div>
    </>
   );
 }
