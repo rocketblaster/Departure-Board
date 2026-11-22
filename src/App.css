@@ -25,6 +25,7 @@ option:hover {
 }
 
 .card {
+  text-align: left;
   margin: 0.5rem 0.75rem;
   padding: 2rem;
   background-color: grey;
@@ -38,7 +39,7 @@ option:hover {
   background-color: #262626;
 }
 
-#stationName {
+.title {
   color: white;
   text-align: left;
 }
