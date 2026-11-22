@@ -1,5 +1,6 @@
 import { createMemo, createSignal, Show } from 'solid-js';
 import { For } from 'solid-js';
+import { Clock } from './Clock';
 
 export default function stationSelect() {
   const [route, setRoute] = createSignal("");
@@ -49,6 +50,7 @@ export default function stationSelect() {
 
   <div class="card">
     <div class="screen">
+      <Clock />
     <h2 class="title">{station() || "Select Station"} </h2>
     <p>Coming to {station()} soon</p>
     </div>

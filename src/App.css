@@ -43,3 +43,7 @@ option:hover {
   color: white;
   text-align: left;
 }
+
+.clock {
+  float: right;
+}
