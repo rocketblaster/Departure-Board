@@ -11,6 +11,7 @@ export default function Home() {
         Welcome! Click on a station below.
       </p>
       <Counter />
+      <a href="https://github.com/rocketblaster/Departure-Board" target="_blank">Repository</a>
     </main>
   );
 }

@@ -15,7 +15,7 @@ export default function NotFound() {
       <Title>Not Found - Solid App</Title>
       <h1>Page Not Found</h1>
       <p>
-        Hop back on the rail
+        <a href="/">Hop back on the rail</a>
       </p>
     </main>
   );
