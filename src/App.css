@@ -44,6 +44,8 @@ option:hover {
   text-align: left;
 }
 
-.clock {
-  float: right;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }

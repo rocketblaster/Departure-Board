@@ -50,8 +50,10 @@ export default function stationSelect() {
 
   <div class="card">
     <div class="screen">
-      <Clock />
-    <h2 class="title">{station() || "Select Station"} </h2>
+      <div class="nav-container">
+        <h2 class="title">{station() || "Select Station"}</h2>
+        <Clock />
+      </div>
     <p>Coming to {station()} soon</p>
     </div>
     </div>
