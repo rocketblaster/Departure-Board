@@ -11,7 +11,7 @@ export function Clock() {
 
     return (
         <time datetime={time().toISOString()}>
-            {time().toLocaleTimeString()}
+            {time().toDateString()} {time().toLocaleTimeString()}
         </time>
     )
 }
