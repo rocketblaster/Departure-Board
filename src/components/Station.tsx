@@ -1,4 +1,4 @@
-import { createMemo, createSignal } from 'solid-js';
+import { createMemo, createSignal, Show } from 'solid-js';
 import { For } from 'solid-js';
 import { Clock } from './Clock';
 
@@ -20,15 +20,16 @@ export default function stationSelect() {
     'Marymoor Village', 'Downtown Redmond',
   ];
   const stationsByRoute: Record<string, string[]> = {
-  "1": oneLineStations,
-  "2": twoLineStations,
+  "1-line": oneLineStations,
+  "2-line": twoLineStations,
 }
 
   const orderedStops = createMemo(() => {
       const stations = createMemo(() => stationsByRoute[route()] ?? []);
       
-    return direction() === "Southbound" ? [...stations()].reverse(): stations();
+    return direction() === "Northbound" ? [...stations()].reverse(): stations();
   });
+  
 
   return (
     <>
@@ -36,15 +37,23 @@ export default function stationSelect() {
     value={route()}
     onChange={e => { setRoute(e.target.value); setStation("Select Station"); }}>
         <option value="">--Select route--</option>
-        <option value="1">1 Line</option>
-        <option value="2">2 Line</option>
+        <option value="1-line">1 Line</option>
+        <option value="2-line">2 Line</option>
       </select>
     <select value={direction()}
     onChange={(e) => setDirection(e.target.value as "Northbound" | "Southbound")}
     >
       <option value="">--Select direction--</option>
-      <option value="Northbound">To Lynnwood</option>
+      <Show when={route() === "2-line"}
+      fallback={
+        <>
+        <option value="Northbound">To Lynnwood</option>
       <option value="Southbound">To Federal Way</option>
+      </>
+      }>
+      <option value="Northbound">To Lynnwood</option>
+      <option value="Southbound">To Downtown Redmond</option>
+      </Show>
     </select>
    <select
         disabled={!route()}
