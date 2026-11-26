@@ -5,7 +5,7 @@ export function Clock() {
 
     const timer = setInterval(() => {
         
-    }, 1000);
+    setTime(new Date())}, 1000);
 
     onCleanup(() => clearInterval(timer));
 
