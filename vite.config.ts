@@ -4,7 +4,7 @@ import solid from '@solidjs/vite-plugin';
 
 export default defineConfig({
   plugins: [
-    solid({ start: true, ssr: true, extensions: ['.jsx', '.tsx'], diagnostics: true }), // add `ssr: true` for streaming SSR
+    solid({ start: true, extensions: ['.jsx', '.tsx'], diagnostics: true }), // add `ssr: true` for streaming SSR
     fileRoutes({ types: true }),
   ],
   server: {
