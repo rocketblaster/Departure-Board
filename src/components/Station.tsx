@@ -75,7 +75,7 @@ export default function stationSelect() {
         <h2 class="title">{station() || "Select Station"}</h2>
         <Clock />
       </div>
-    <p>Coming to {station()} soon</p>
+    <p>{route()} {direction()}</p>
     </div>
     </div>
    </>
