@@ -29,7 +29,7 @@
     "@solidjs/router": "^2.0.0",
     "@solidjs/web": "^2.0.0",
     "onebusaway-sdk": "^1.21.1",
-    "solid-js": "^2.0.0",
+    "solid-js": "^2.0.4",
     "zod": "^4.6.7"
   }
 }
