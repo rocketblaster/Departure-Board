@@ -1,6 +1,7 @@
 import { createMemo, createSignal, Show } from 'solid-js';
 import { For } from 'solid-js';
 import { Clock } from './Clock';
+import { StopArrivals } from './Departures';
 
 export default function stationSelect() {
   const [route, setRoute] = createSignal("");
@@ -76,6 +77,7 @@ export default function stationSelect() {
         <Clock />
       </div>
     <p>{route()} {direction()}</p>
+    <StopArrivals />
     </div>
     </div>
    </>
